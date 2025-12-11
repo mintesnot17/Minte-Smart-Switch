@@ -5,6 +5,7 @@ name = "minte-smart-switch"
   image = "python:3.13"  # or leave default
 
 [env]
+  FLASK_APP = "mintesmartswitch.py"
   FLASK_ENV = "production"
 
 [[services]]
