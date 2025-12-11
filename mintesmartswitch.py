@@ -601,7 +601,7 @@ def main():
         time.sleep(2)
         
         # Get port from Render environment or default
-        port = int(os.environ.get("PORT", 10000))
+        port = int(os.environ.get("PORT", 8080))
         
         logger.info(f"🌐 Starting Flask server on port {port}")
         logger.info(f"🌍 Service URL: https://smartswitchcloud.onrender.com")
