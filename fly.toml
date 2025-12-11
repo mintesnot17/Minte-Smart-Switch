@@ -1,0 +1,20 @@
+[app]
+name = "minte-smart-switch"
+
+[build]
+  image = "python:3.13"  # or leave default
+
+[env]
+  FLASK_ENV = "production"
+
+[[services]]
+  internal_port = 8080   # matches the port in your Flask code
+  protocol = "tcp"
+
+  [[services.ports]]
+    port = 80            # external
+    handlers = ["http"]
+
+  [[services.ports]]
+    port = 443
+    handlers = ["tls", "http"]
